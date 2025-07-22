@@ -14,10 +14,14 @@ manager, and uses the [App Router](https://nextjs.org/docs/app) model for Next.j
 - TypeScript frontend using [Next.js 15](https://nextjs.org/) React framework
 - [TailwindCSS 4](https://tailwindcss.com/) as a utility-first atomic CSS framework
   - The example page in this template app has been updated to use only TailwindCSS
+- [shadcn/ui](https://ui.shadcn.com/) components pre-configured and ready to use
+  - Beautiful, accessible, and customizable UI components built on top of Radix UI
+  - Consistent design system with proper theming support
+  - Components are copy-paste friendly and fully customizable
   - While not included by default, consider using
     [React Aria components](https://react-spectrum.adobe.com/react-aria/index.html)
-    and/or [HeadlessUI components](https://headlessui.com/) for completely unstyled and
-    fully accessible UI components, which integrate nicely with TailwindCSS
+    and/or [HeadlessUI components](https://headlessui.com/) for additional completely unstyled and
+    fully accessible UI components
 - Opinionated formatting and linting already setup and enabled
   - [Biome](https://biomejs.dev/) for a combination of fast formatting, linting, and
     import sorting of TypeScript code, and [ESLint](https://eslint.org/) for any missing
@@ -66,6 +70,29 @@ pnpm tauri build
 Next.js frontend source files are located in `src/` and Tauri Rust application source
 files are located in `src-tauri/`. Please consult the Next.js and Tauri documentation
 respectively for questions pertaining to either technology.
+
+### Using shadcn/ui Components
+
+This template comes with shadcn/ui pre-configured. You can add more components using:
+
+```shell
+pnpm dlx shadcn@latest add [component-name]
+```
+
+For example, to add a Card component:
+
+```shell
+pnpm dlx shadcn@latest add card
+```
+
+Components will be installed to `src/components/ui/` and can be imported like:
+
+```typescript
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+```
+
+See the [shadcn/ui documentation](https://ui.shadcn.com/docs) for available components and usage examples.
 
 ## Caveats
 

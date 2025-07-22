@@ -2,7 +2,6 @@
 import { invoke } from "@tauri-apps/api/core";
 import Image from "next/image";
 import { useCallback, useState } from "react";
-import { RoundedButton } from "@/components/RoundedButton";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
